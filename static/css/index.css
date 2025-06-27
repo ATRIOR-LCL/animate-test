@@ -173,7 +173,6 @@ body {
   align-items: center;
   text-indent: 2;
 
-
   & p {
     line-height: 1.5;
     font-size: 1.3rem;
@@ -185,24 +184,24 @@ body {
 
 .intelligent {
   background-color: rgb(0, 162, 255);
-  border-radius: 15px;
+  border-radius: 20px;
   padding: 5px;
 }
 
 .lightweight {
   background-color: #7a78ff;
-  border-radius: 15px;
+  border-radius: 20px;
   padding: 5px;
 }
 
 .simple {
-  border-radius: 15px;
+  border-radius: 20px;
   padding: 5px;
   background-color: #2ad300;
 }
 
 .any {
-  border-radius: 15px;
+  border-radius: 20px;
   padding: 5px;
   background-color: #fe6d38;
 }
