@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "DM Sans", sans-serif;
+  overflow: hidden;
+  background-color: #3b3b3b;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #fff;
+}
+
+.content {
+  width: 40%;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  /* background-color: red; */
+  border-radius: 10px;
+}
+
+.upload-form {
+  width: 100%;
+  height: 20%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  user-select: none;
+}
+
+.result {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: green; */
+}
+
+.result-img {
+  width: 30%;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: box-shadow 0.3s ease;
+  &:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & img {
+    width: 100%;
+    object-fit: cover;
+    -webkit-user-drag: none;
+    z-index: 1;
+  }
+  /* background-color: red; */
+}
+
+.result-img-span {
+  position: absolute;
+  z-index: 0;
+}
+
+.result-text {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.header {
+  width: 100%;
+  height: 8%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  font-size: 40px;
+  font-weight: 900;
+  user-select: none;
+}
+
+.select-submit {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  height: 40%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  position: relative;
+}
+
+#select {
+  display: none;
+}
+
+.select-item {
+  height: 80%;
+  aspect-ratio: 3;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  z-index: 3;
+  background-color: #636363;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      closest-side circle,
+      rgb(255, 255, 255),
+      transparent
+    );
+    transform: translate(var(--x, -1000000px), var(--y, -1000000px));
+  }
+}
+
+.select-text {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset: 2px;
+  background-color: #373737;
+  z-index: 4;
+  border-radius: 5px;
+}
+
+.submit-button {
+  appearance: none;
+  outline: none;
+  border: none;
+  /* background-color: #7a78ff; */
+  color: #fff;
+}
+
+.desc {
+  width: 100%;
+  height: 30%;
+  margin-top: 50px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  text-indent: 2;
+
+
+  & p {
+    line-height: 1.5;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 2.5;
+    color: #e1e1e1;
+  }
+}
+
+.intelligent {
+  background-color: rgb(0, 162, 255);
+  border-radius: 15px;
+  padding: 5px;
+}
+
+.lightweight {
+  background-color: #7a78ff;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+.simple {
+  border-radius: 15px;
+  padding: 5px;
+  background-color: #2ad300;
+}
+
+.any {
+  border-radius: 15px;
+  padding: 5px;
+  background-color: #fe6d38;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 5%;
+  /* background-color: #fff; */
+  font-size: 15px;
+  color: #fff;
+  background-color: #2c2c2c;
+}
+
+.footer-avatar {
+  height: 70%;
+}
+
+.atrior {
+  font-weight: 700;
+}
+
+.result-h2 {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.link {
+  position: absolute;
+  height: 80%;
+  width: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+}
