@@ -272,7 +272,7 @@ imagenent_dict = {
   "white wolf": "白狼",
   "red wolf": "红狼",
   "coyote": "郊狼",
-  "dingo": "丁狗",
+  "dingo": "澳洲野狗",
   "dhole": "豺",
   "African hunting dog": "非洲野犬",
   "hyena": "鬣狗",

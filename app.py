@@ -33,7 +33,7 @@ transform = transforms.Compose([
         std=[0.229, 0.224, 0.225]
     )
 ])
-
+# 预测函数
 def predict_image(image_path):
     image = Image.open(image_path).convert("RGB")
     img_tensor = transform(image).unsqueeze(0).to(device)
@@ -43,6 +43,7 @@ def predict_image(image_path):
         label = labels[predicted.item()]
     return label
 
+# 首页路由
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
